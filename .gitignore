@@ -1,0 +1,35 @@
+# Python Virtual Environment & Cache
+.venv/
+__pycache__/
+*.pyc
+
+# VSCode & Environment Variables
+.vscode/
+.env
+
+# --- BIG STUFF TO IGNORE ---
+
+# ChromaDB Database
+chroma_db/
+
+# ChromaData Database
+chroma_data/
+
+# All Data
+data/
+
+# All SQL Files (especially that RawData.sql)
+sql/
+
+# Database files
+*.sqlite3
+
+# Airflow runtime files (you have an 'airflow' folder)
+airflow/logs/
+airflow/*.db
+*.log
+
+# Numpy/CSV (covered by 'data/' but good to have)
+*.npy
+*.csv
+.env
