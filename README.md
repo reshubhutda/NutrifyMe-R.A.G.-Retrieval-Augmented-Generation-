@@ -184,9 +184,58 @@ The system operates in two modes: </p>
 
 
 <div>
-
+<h3>Data Sources & Overview</h3>
+<p>NutrifyMe integrates four major datasets through the ETL pipeline before converting them into RAG-ready vector embeddings. Each dataset contributes different layers of nutritional, biological, and health-risk intelligence.</p>
+<p><b>Open Nutrition Dataset</b></p>
+<ul>
+  <li>Name</li>
+  <li>Alternate Names</li>
+  <li>Description</li>
+  <li>Serving</li>
+  <li>Nutrition_100gm</li>
+  <li>Labels</li>
+  <li>Package Size</li>
+  <li>Ingredients</li>
+  <li>Ingredient Analysis</li>
+</ul>
+<p><b>Open Food Facts Dataset</b></p>
+<ul>
+  <li>Product Name</li>
+  <li>Generic Name</li>
+  <li>Quantity</li>
+  <li>Categories EN</li>
+  <li>Labels EN</li>
+  <li>Ingredients Text</li>
+  <li>Allergens EN</li>
+  <li>Traces EN</li>
+  <li>Serving Size</li>
+  <li>Additives EN</li>
+  <li>Nutrtion 100gm</li>
+</ul>
+<p><b>NHANES Health Dataset</b></p>
+<ul>
+  <li>USER_ID</li>
+  <li>GENDER</li>
+  <li>Age</li>
+  <li>Race</li>
+  <li>Birth Country</li>
+  <li>Marital Status</li>
+  <li></li>
+  <li>Traces EN</li>
+  <li>Serving Size</li>
+  <li>Additives EN</li>
+  <li>Nutrtion 100gm</li>
+</ul>  
+<p><b>Reference Range Dataset (NHANES Normal Ranges)</b></p>
+<ul>
+  <li>Test</li>
+  <li>Adult Range</li>
+  <li>Units</li>
+  <li>Chld Range</li>
+  <li>Adult Min</li>
+  <li>Adult Max</li>
+  <li>Child Min</li>
+  <li>Child Max</li>
+</ul>
   
-</div>
-
-
 </div>
