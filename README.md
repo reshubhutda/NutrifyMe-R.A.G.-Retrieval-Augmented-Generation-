@@ -131,6 +131,58 @@ While pipeline components are manually triggered due to student budget constrain
   <p>Docker Desktop - Environment runner for Airflow container setup.</p>
   <p>Git / GitHub - Version control and project management.</p>
   <p>Figma - High-fidelity UI prototypes and user flow design.</p>
-
   
-  </div>
+</div>
+
+
+<div>
+<h3>How The System Works?</h3>
+<p>NutrifyMe combines a data-rich ETL pipeline, a vector-based retrieval layer, and LLM-driven personalized reasoning.
+The system operates in two modes: </p>
+  <ol>
+  <li>Online Mode (RAG Workflow) → answering user questions with precision</li>
+  <p>Step 1 — User Interacts Through Streamlit. The user asks a question through:
+  Text input, or Voice input (converted to text) <br>
+  <i>Example: “I’m pre-diabetic and want a snack. Is guacamole okay for me?”</i></p>
+  <p>Step 2 — Load User Profile from MySQL : Age, height, weight, BMI Conditions (e.g., diabetes, thyroid, BP), Medications, Any metabolic flags. This gives the system context about who is asking.</p>
+  <p> Step 3 — Embedding Generation (MiniLM-L6-v2). The user query is embedded using MiniLM-L6-v2. This converts the text into a numeric vector representing:
+    Intent, Food terms, Health-specific semantics</p>  
+  <p>Step 4 — Vector Retrieval from ChromaDB. ChromaDB searches thousands of embedded chunks: Food names + alt names, Allergens, Nutrient lists, Serving sizes, NHANES biomarker, reference info, Health-condition rules</p>
+  <p>Step 5 — Structured Context Builder. Your custom module combines:<br>
+    Food Data (serving size, allergens, nutrient 100g values, ingredient analysis)<br>
+    User Data (profile, conditions, medications)<br>
+    Reference Health Data (NHANES reference ranges, safe/unsafe biomarkers)<br>
+    Logic Constraints (allergen filters, risky ingredients, high-sodium alerts, etc.)<br>
+    This creates the final context block sent to Gemini.</p>
+    <p>Step 6 — Gemini 2.0 Flash Reasoning. The Gemini prompt receives: Cleaned structured context, User biological/medical profile, Food metadata, Safety rules, Required output format (short, clear, actionable). <br> 
+    Gemini performs: Multi-step reasoning, Risk assessment, Personalization, Safety-based filtration, Step-by-step justification</p>
+    <p>Step 7 — Final Answer Returned to Streamlit, User sees: Personalized recommendation, Why it is safe/unsafe, What to avoid, Better alternatives, Portion guidance</p> <br>
+
+  <li>Offline Mode (ETL + Data Preparation) → preparing high-quality structured data </li>
+  <p>Step 1 — Raw Data Extraction, Sources: NHANES (health + biomarker + demographic data), Open Food Facts (food metadata + ingredients + allergens + nutrition), Open Nutrition Data (nutrients 100g). All pulled from MySQL (staging layer).</p>
+  <p>Step 2 — Docker + Airflow (Orchestration). You manually trigger DAGs (student budget), but architecture is production-ready. Airflow moves data between: <br>MySQL → S3</p>
+  <p>Step 3 — S3 as Raw + Semi-Processed Data Lake, S3 stores: Cleaned/intermediate CSV</p>
+  <p>Step 4 — Databricks CE (Cleaning + Feature Engineering). Even without paid clusters, you manually run transformations:<br>
+  Merging NHANES + nutrition datasets, Removing corrupted values, Standardizing units, Calculation of normalized nutrition fields, Deriving features for ML/RAG
+  <br>Outputs → Uploaded to Snowflake</p>
+  <p>Step 5 — Snowflake as Final Analytical Warehouse, Snowflake holds fully cleaned, merged, RAG-ready tables: Foods (standardized), Nutrients (100g normalized), Allergen tables, Ingredient analysis tables, NHANES reference ranges. This is the source of truth for your retrieval layer</p>
+  <p>Step 6 — VS Code (RAG Model Development). From VS Code you:<br>
+  Pull Snowflake tables, Build chunking logic, Generate embeddings, Insert vectors into ChromaDB, Test prompt logic, Run RAG end-to-end</p>
+  <p>Step 7 — ChromaDB as Local Vector Store: All food vectors, Health-condition vectors, Reference-range vectors, Merged context vectors</p>
+
+  <p><b>Final Response Generation</b></p>
+  <ul>
+    <li>A personalized food recommendation</li>
+    <li>Why it is OK or not OK</li>
+    <li>What ingredients pose risk</li>
+    <li>Safer alternatives</li>
+    <li>Portion suggestions</li>
+    <li>Evidence-based reasoning from NHANES + nutrient tables</li>
+  </ul>
+  </ol>
+
+
+
+
+
+</div>
