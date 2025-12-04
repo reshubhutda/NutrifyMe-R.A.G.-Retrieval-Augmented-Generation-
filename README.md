@@ -131,7 +131,7 @@ While pipeline components are manually triggered due to student budget constrain
   <p>Docker Desktop - Environment runner for Airflow container setup.</p>
   <p>Git / GitHub - Version control and project management.</p>
   <p>Figma - High-fidelity UI prototypes and user flow design.</p>
-  
+  <p align="center">••••••••••••</p>
 </div>
 
 
@@ -180,9 +180,13 @@ The system operates in two modes: </p>
     <li>Evidence-based reasoning from NHANES + nutrient tables</li>
   </ul>
   </ol>
+</div>
 
 
+<div>
 
+  
+</div>
 
 
 </div>
