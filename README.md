@@ -39,7 +39,7 @@ While pipeline components are manually triggered due to student budget constrain
       <li>The query is embedded with MiniLM-L6-v2.</li>
       <li>ChromaDB performs semantic search + similarity analytics, retrieving:</li>
       <ol>
-        <li>relevant foods</li>
+        <li>relevant foods</li>https://github.com/account/organizations/new
         <li>health data</li>
         <li>user data</li>
         <li>reference data</li>
@@ -47,7 +47,9 @@ While pipeline components are manually triggered due to student budget constrain
       <li>A structured final context is assembled (food + health + user + reference).</li>
       <li>Gemini 2.0 Flash generates a personalized, rule-based response.</li>
       <li>The result is returned to Streamlit for display.</li>
-      
+
+      <img width="1536" height="1024" alt="ChatGPT Image Dec 3, 2025, 11_45_26 PM" src="https://github.com/user-attachments/assets/9922378e-8b52-4294-945e-969598cf6cb7" />
+
    </ul>
     <br>
     <li>A fully implemented ETL pipeline that prepares all nutrition and health data</li>
