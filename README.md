@@ -65,5 +65,72 @@ While pipeline components are manually triggered due to student budget constrain
       <li>Embeddings are generated and saved into ChromaDB, completing the loop.</li>
    </ul>
   </ol>
+  <p align="center">••••••••••••</p>
 </div>
 
+
+<div>
+  <h3>Tech Stack</h3>
+  <p><b>Programming & Core Libraries</b></p>
+  <ul>
+  <li>Python 3.10 – Main development language</li>
+  <li>NumPy – Numerical operations</li>
+  <li>Pandas – Data preprocessing & cleaning</li>
+  <li>json / time / tqdm – Utilities for parsing, timing, progress visualization</li>
+  <li>LangChain – Prompt orchestration, RAG chain logic</li>
+  <li>google-generativeai – Gemini 2.0 Flash client</li>
+  <li>sentence-transformers – MiniLM-L6-v2 embeddings</li>
+  </ul>
+  <br>
+  <p><b>Application Layer</b></p>
+  <p><b>Streamlit</b> Used to build the complete user experience: onboarding, voice/text input, results display, and profile pages.</p>
+  <br>
+  <p><b>Databases & Storage</b></p>
+  <p>MySQL</p>
+  <ul>
+  <li>Raw User Database</li>
+  <li>Raw Food Database</li>
+  <li>Raw Health Database</li>
+  <li>Raw Reference Database</li>
+  </ul>
+    
+  <p>ChromaDB</p>
+  <ul>
+  <li>MiniLM L6-v2 embeddings</li>
+  <li>Semantic search vectors</li>
+  <li>Food + nutrition + health chunks + user profile</li>
+  </ul>
+
+  <p>AWS</p>
+  <ul>
+  <li>Acts as the student-budget data lake for staging raw/intermediate files.</li>
+  </ul>
+
+  <p><b>Data Transformation</b></p>
+  <p>Docker</p>
+  <ul>
+  <li>Hosts the full Airflow environment in containers.</li>
+  </ul>
+
+  <p>Airflow Manual, DAG-based orchestration for:</p>
+  <ul>
+  <li>Extract → Stage → Load</li>
+  <li>Moving data between MySQL → S3</li>
+  </ul>
+
+  <p>Databricks - Cleaning, Merging, Feature Engineering, Rebuliding Tables</p>
+
+  <p>Snowflake - Final warehouse storing production-ready cleaned data for RAG consumption</p>
+  
+  <p><b>Machine Learning & LLM </b></p>
+  <p>MiniLM-L6-v2 (Sentence Transformers) - Generates embeddings for semantic retrieval.</p>
+  <p>Google Gemini 2.0 Flash - Deep Reasoning, Precision Based Filering, Safety-first food recommendation logic, User-condition-specific personalization</p>
+
+  <p><b>Development & Workflow Tools</b></p>
+  <p>VS Code - Development, debugging, RAG module building.</p>
+  <p>Docker Desktop - Environment runner for Airflow container setup.</p>
+  <p>Git / GitHub - Version control and project management.</p>
+  <p>Figma - High-fidelity UI prototypes and user flow design.</p>
+
+  
+  </div>
