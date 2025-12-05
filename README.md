@@ -158,6 +158,8 @@ The system operates in two modes: </p>
     Gemini performs: Multi-step reasoning, Risk assessment, Personalization, Safety-based filtration, Step-by-step justification</p>
     <p>Step 7 — Final Answer Returned to Streamlit, User sees: Personalized recommendation, Why it is safe/unsafe, What to avoid, Better alternatives, Portion guidance</p> <br>
 
+![image]("Rag%20pipeline.jpg")
+
   <li>Offline Mode (ETL + Data Preparation) → preparing high-quality structured data </li>
   <p>Step 1 — Raw Data Extraction, Sources: NHANES (health + biomarker + demographic data), Open Food Facts (food metadata + ingredients + allergens + nutrition), Open Nutrition Data (nutrients 100g). All pulled from MySQL (staging layer).</p>
   <p>Step 2 — Docker + Airflow (Orchestration). You manually trigger DAGs (student budget), but architecture is production-ready. Airflow moves data between: <br>MySQL → S3</p>
