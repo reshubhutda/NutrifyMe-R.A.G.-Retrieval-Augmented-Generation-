@@ -220,11 +220,32 @@ The system operates in two modes: </p>
   <li>Race</li>
   <li>Birth Country</li>
   <li>Marital Status</li>
+  <li>WEIGHT_KG</li>
+  <li>HEIGHT_CM</li>
+  <li>BMI</li>
+  <li>BMI Category</li>
+  <p>Blood Count</p><br>
+  <p>WBC_COUNT, LYMPHOCYTE_PCT, MONOCYTE_PCT, NEUTROPHIL_PCT, EOSINOPHIL_PCT, BASOPHIL_PCT, LYMPHOCYTE_NUM, RBC_COUNT, HEMOGLOBIN, HEMATOCRIT, PLATELET_COUNT</p>
+  <br>
+  <p>Cholesterol & Lipid Panel</p> <br>
+  <p>HDL Cholesterol (mg/dL), TRIGLYCERIDES_MG_DL_X, LDL Cholesterol (mg/dL), Total Cholesterol (mg/dL), TRIGLYCERIDES_MG_DL_Y</p>
+  <p>Metabolic Markers</p> <br>
+  <p>HBA1C_PERCENT, Fasting Glucose (mg/dL), HS_CRP_MG_L</p> <br>
+  <p>Liver & Kideny Panel</p><br>
+  <p>ALT, ALP, AST, GGT, Albumin, Total Protein, Creatinine, BUN, Albumin_Creatinine_Ratio_MG_G, Total Bilirubin</p><br>
+  <p>Electrolytes & Mineral</p><br>
+  <p>Sodium, Potassium, Chloride, Magnesium, Phosphorus, Calcium, Bicarbonate, Osmolality</p><br>
+  <p>Others</p><br>
+  <p>Iron, LDH, CK, Vitamin D 25-OH</p>
   <li></li>
-  <li>Traces EN</li>
-  <li>Serving Size</li>
-  <li>Additives EN</li>
-  <li>Nutrtion 100gm</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
 </ul>  
 <p><b>Reference Range Dataset (NHANES Normal Ranges)</b></p>
 <ul>
