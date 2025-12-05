@@ -48,7 +48,7 @@ While pipeline components are manually triggered due to student budget constrain
       <li>Gemini 2.0 Flash generates a personalized, rule-based response.</li>
       <li>The result is returned to Streamlit for display.</li>
 
-      <img width="1536" height="1024" alt="ChatGPT Image Dec 3, 2025, 11_45_26 PM" src="https://github.com/user-attachments/assets/9922378e-8b52-4294-945e-969598cf6cb7" />
+      
 
    </ul>
     <br>
@@ -180,6 +180,7 @@ The system operates in two modes: </p>
     <li>Evidence-based reasoning from NHANES + nutrient tables</li>
   </ul>
   </ol>
+  <p align="center">••••••••••••</p>
 </div>
 
 
@@ -224,28 +225,47 @@ The system operates in two modes: </p>
   <li>HEIGHT_CM</li>
   <li>BMI</li>
   <li>BMI Category</li>
-  <p>Blood Count</p><br>
-  <p>WBC_COUNT, LYMPHOCYTE_PCT, MONOCYTE_PCT, NEUTROPHIL_PCT, EOSINOPHIL_PCT, BASOPHIL_PCT, LYMPHOCYTE_NUM, RBC_COUNT, HEMOGLOBIN, HEMATOCRIT, PLATELET_COUNT</p>
-  <br>
-  <p>Cholesterol & Lipid Panel</p> <br>
-  <p>HDL Cholesterol (mg/dL), TRIGLYCERIDES_MG_DL_X, LDL Cholesterol (mg/dL), Total Cholesterol (mg/dL), TRIGLYCERIDES_MG_DL_Y</p>
-  <p>Metabolic Markers</p> <br>
-  <p>HBA1C_PERCENT, Fasting Glucose (mg/dL), HS_CRP_MG_L</p> <br>
-  <p>Liver & Kideny Panel</p><br>
-  <p>ALT, ALP, AST, GGT, Albumin, Total Protein, Creatinine, BUN, Albumin_Creatinine_Ratio_MG_G, Total Bilirubin</p><br>
-  <p>Electrolytes & Mineral</p><br>
-  <p>Sodium, Potassium, Chloride, Magnesium, Phosphorus, Calcium, Bicarbonate, Osmolality</p><br>
-  <p>Others</p><br>
-  <p>Iron, LDH, CK, Vitamin D 25-OH</p>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>WBC_COUNT</li>
+  <li>LYMPHOCYTE_PCT</li>
+  <li>MONOCYTE_PCT</li>
+  <li>NEUTROPHIL_PCT</li>
+  <li>EOSINOPHIL_PCT</li> 
+  <li>BASOPHIL_PCT</li> 
+  <li>LYMPHOCYTE_NUM</li>
+  <li>RBC_COUNT</li>
+  <li>HEMOGLOBIN</li>
+  <li>HEMATOCRIT</li>
+  <li>PLATELET_COUNT</li>
+  <li>HDL Cholesterol (mg/dL)</li>
+  <li>TRIGLYCERIDES_MG_DL_X</li> 
+  <li>LDL Cholesterol (mg/dL)</li>
+  <li>Total Cholesterol (mg/dL)</li>
+  <li>TRIGLYCERIDES_MG_DL_Y</li>
+  <li>HBA1C_PERCENT</li>
+  <li>Fasting Glucose (mg/dL)</li> 
+  <li>HS_CRP_MG_L</li>
+  <li>ALT</li>
+  <li>ALP</li>
+  <li>AST</li> 
+  <li>GGT</li>
+  <li>Albumin</li>
+  <li>Total Protein</li>
+  <li>Creatinine</li>
+  <li>BUN</li> 
+  <li>Albumin_Creatinine_Ratio_MG_G</li>
+  <li>Total Bilirubin</li>
+  <li>Sodium</li>
+  <li>Potassium</li>
+  <li>Chloride</li>
+  <li>Magnesium</li>
+  <li>Phosphorus</li>
+  <li>Calcium</li>
+  <li>Bicarbonate</li>
+  <li>Osmolality</li>
+  <li>Iron</li>
+  <li>LDH</li>
+  <li>CK</li> 
+  <li>Vitamin D</li>
 </ul>  
 <p><b>Reference Range Dataset (NHANES Normal Ranges)</b></p>
 <ul>
@@ -258,5 +278,70 @@ The system operates in two modes: </p>
   <li>Child Min</li>
   <li>Child Max</li>
 </ul>
-  
+<p align="center">••••••••••••</p>
 </div>
+
+<h3>Project Directory Structure</h3>
+
+```markdown
+project-root/
+│── .venv/
+│── airflow/
+│   ├── dags/
+│   ├── logs/
+│   ├── plugins/
+│   └── docker-compose.yml
+│
+│── chroma_data/
+│   ├── chroma.sqlite3
+│   ├── b5c719bb-...
+│   ├── b9f6e813-...
+│   └── e5959423-...
+│
+│── data/
+│   ├── Processed_Health.csv
+│   ├── Processed_Nutrition.csv
+│   ├── Processed_Reference_Range.csv
+│   ├── health_embeddings.npy
+│   ├── health_row_ids.npy
+│   ├── nutrition_embeddings.npy
+│   ├── nutrition_row_ids.npy
+│   ├── reference_embeddings.npy
+│   └── reference_row_ids.npy
+│
+│── notebook/
+│   ├── app.py
+│   ├── build_all.py
+│   ├── build_health_db.py
+│   ├── build_nutrition_db.py
+│   ├── build_profile_db.py
+│   ├── build_reference_db.py
+│   ├── context_builder.py
+│   ├── health_embed_utils.py
+│   ├── nutrition_embed_utils.py
+│   ├── nutrition_retriever.py
+│   ├── profile_matcher_file.py
+│   ├── query_health.py
+│   ├── query_nutrition.py
+│   ├── query_reference.py
+│   ├── reference_embed_utils.py
+│   ├── reference_loader.py
+│   ├── run_embeddings.py
+│   ├── Snowflake_Connector.py
+│   ├── store_embed_csv.py
+│   ├── user_db.py
+│   └── user_query.py
+│
+│── sql/
+│   └── RawData.sql
+│
+├── .env
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── uv.lock
+
+```
+
+<p align="center">••••••••••••</p>
+
