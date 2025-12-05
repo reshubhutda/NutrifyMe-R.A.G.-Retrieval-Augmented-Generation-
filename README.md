@@ -147,7 +147,7 @@ While pipeline components are manually triggered due to student budget constrain
 <p>NutrifyMe combines a data-rich ETL pipeline, a vector-based retrieval layer, and LLM-driven personalized reasoning.
 The system operates in two modes: </p>
   <ol>
-  <li>Online Mode (RAG Workflow) → answering user questions with precision</li>
+  <li><b>Online Mode (RAG Workflow) → answering user questions with precision</b></li><br>
   <p>Step 1 — User Interacts Through Streamlit. The user asks a question through:
   Text input, or Voice input (converted to text) <br>
   <i>Example: “I’m pre-diabetic and want a snack. Is guacamole okay for me?”</i></p>
@@ -167,7 +167,7 @@ The system operates in two modes: </p>
 
 ![RAG Pipeline](RAG%20Pipeline.png)
 
-  <li>Offline Mode (ETL + Data Preparation) → preparing high-quality structured data </li>
+  <li><b>Offline Mode (ETL + Data Preparation) → preparing high-quality structured data</b> </li><br>
   <p>Step 1 — Raw Data Extraction, Sources: NHANES (health + biomarker + demographic data), Open Food Facts (food metadata + ingredients + allergens + nutrition), Open Nutrition Data (nutrients 100g). All pulled from MySQL (staging layer).</p>
   <p>Step 2 — Docker + Airflow (Orchestration). You manually trigger DAGs (student budget), but architecture is production-ready. Airflow moves data between: <br>MySQL → S3</p>
   <p>Step 3 — S3 as Raw + Semi-Processed Data Lake, S3 stores: Cleaned/intermediate CSV</p>
