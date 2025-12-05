@@ -97,7 +97,6 @@ def start_agent_once(user_id, user_question):
     # 4. Ask Gemini (same as loop)
     
     answer = ask_gemini(user_question, final_context)
-
     return answer
 
 def main():
@@ -208,6 +207,7 @@ def main():
 
         answer = start_agent_once(user_id, user_question)
         print(answer)
+        
 
 
 ## code from the bottom is comemnted but I will keep it for now

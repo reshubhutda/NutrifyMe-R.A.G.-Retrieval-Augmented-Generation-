@@ -18,3 +18,6 @@ google-generativeai
 snowflake-connector-python
 fastapi
 uvicorn
+ragas
+datasets
+evaluate
