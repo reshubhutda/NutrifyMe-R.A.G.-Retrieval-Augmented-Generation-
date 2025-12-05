@@ -1,4 +1,4 @@
-# NutrifyMe – End-to-End RAG System for Personalized Nutrition
+# NutrifyMe – RAG Pipeline for Personalized Nutrition
 
 <h3>A full-stack RAG pipeline integrating MySQL, ChromaDB, Snowflake, Airflow, S3, Databricks, and Gemini LLM for health-aware nutrition insights</h3>
 <br>
