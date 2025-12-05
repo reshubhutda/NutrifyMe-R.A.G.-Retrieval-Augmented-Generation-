@@ -39,7 +39,7 @@ While pipeline components are manually triggered due to student budget constrain
       <li>The query is embedded with MiniLM-L6-v2.</li>
       <li>ChromaDB performs semantic search + similarity analytics, retrieving:</li>
       <ol>
-        <li>relevant foods</li>https://github.com/account/organizations/new
+        <li>relevant foods</li>
         <li>health data</li>
         <li>user data</li>
         <li>reference data</li>
@@ -158,7 +158,7 @@ The system operates in two modes: </p>
     Gemini performs: Multi-step reasoning, Risk assessment, Personalization, Safety-based filtration, Step-by-step justification</p>
     <p>Step 7 — Final Answer Returned to Streamlit, User sees: Personalized recommendation, Why it is safe/unsafe, What to avoid, Better alternatives, Portion guidance</p> <br>
 
-![image]("Rag%20pipeline.jpg")
+![RAG Pipeline](RAG%20Pipeline.png)
 
   <li>Offline Mode (ETL + Data Preparation) → preparing high-quality structured data </li>
   <p>Step 1 — Raw Data Extraction, Sources: NHANES (health + biomarker + demographic data), Open Food Facts (food metadata + ingredients + allergens + nutrition), Open Nutrition Data (nutrients 100g). All pulled from MySQL (staging layer).</p>
@@ -171,7 +171,9 @@ The system operates in two modes: </p>
   <p>Step 6 — VS Code (RAG Model Development). From VS Code you:<br>
   Pull Snowflake tables, Build chunking logic, Generate embeddings, Insert vectors into ChromaDB, Test prompt logic, Run RAG end-to-end</p>
   <p>Step 7 — ChromaDB as Local Vector Store: All food vectors, Health-condition vectors, Reference-range vectors, Merged context vectors</p>
-
+  
+![ETL Pipeline](ETL%20Pipeline.jpg)
+  
   <p><b>Final Response Generation</b></p>
   <ul>
     <li>A personalized food recommendation</li>
@@ -347,3 +349,19 @@ project-root/
 
 <p align="center">••••••••••••</p>
 
+<div>
+  <h3>Figma</h3>
+  <p>The NutrifyMe UI was first designed in Figma to map out the complete user journey before implementation. The goal of the interface is simplicity, clarity, and fast interaction — allowing users to ask nutrition questions with minimal friction. The prototype captures the user flows:</p>
+  <p><b>Onboarding</b></p>
+  <ul>
+    <li>Enter basic details (name, age, height, weight, BMI)</li>
+    <li>Add health conditions and medications</li>
+  </ul>
+  <p><b>Home & Navigation</b></p>
+  <ul>
+    <li>Ask a Question (Text or Voice Input)</li>
+    <li>View Profile</li>
+    <li>home</li>
+  </ul>
+  
+</div>
