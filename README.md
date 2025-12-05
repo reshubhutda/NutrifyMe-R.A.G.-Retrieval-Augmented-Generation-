@@ -9,6 +9,13 @@
 It integrates a custom Retrieval-Augmented Generation workflow with real ETL components, including MySQL, ChromaDB, Docker, Airflow, AWS S3, Databricks Community Edition, and Snowflake. Large datasets such as NHANES, Open Food Facts, and Open Nutrition are cleaned and transformed, embedded using MiniLM-L6-v2, stored in ChromaDB, and ultimately consumed by Google Gemini 2.0 Flash for reasoning. A Streamlit interface supports both text and voice input, making the system easy and natural to use.
 
 While pipeline components are manually triggered due to student budget constraints, every part of the architecture—from ingestion to transformation to retrieval—has been fully implemented, demonstrating how enterprise-grade AI systems can be built end-to-end even under resource limitations.</p>
+
+![Poster](Poster.jpg)
+
+
+![FigmaPrototype](FigmaPrototype.gif)
+
+
 <p align="center">••••••••••••</p>
 </div>
 
@@ -363,5 +370,9 @@ project-root/
     <li>View Profile</li>
     <li>home</li>
   </ul>
-  
+
+![flow](flow.png)
+
+![Screens](Screens.jpg)
+
 </div>
