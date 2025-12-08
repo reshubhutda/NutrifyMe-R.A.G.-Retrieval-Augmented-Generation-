@@ -381,4 +381,458 @@ project-root/
 
 ![Screens](Screens.jpg)
 
+<p align="center">••••••••••••</p>
+
 </div>
+
+<div>
+  <h3><b>A prompt context output for one API call</b></h3>
+  <p><b>User asked :- Hey Nutrify, I am hungry and I feel like eating Doritos.</b></p>
+</div>
+
+
+```json
+{
+  "profile": {
+    "summary": "Harish is a 27-year-old Male with BMI 24.2, height 182.0 cm and weight 80.0 kg. Ethnicity: American. Marital status: Single. Reported medical conditions: Snoring, Obese, High BP. Current medications: Melatonin.",
+    "personal_info": {
+      "user_id": 14,
+      "name": "Harish",
+      "age": 27,
+      "gender": "Male",
+      "ethnicity": "American",
+      "height_cm": 182.0,
+      "weight_kg": 80.0,
+      "bmi": 24.15,
+      "marital_status": "Single"
+    },
+    "medical": {
+      "conditions": "Snoring, Obese, High BP",
+      "medications": "Melatonin"
+    }
+  },
+  "reference_ranges": {
+    "WBC Count": {
+      "units": "x10^3/\u00b5L",
+      "adult_min": "4.0",
+      "adult_max": "11.0",
+      "child_min": "5.0",
+      "child_max": "14.5"
+    },
+    "Platelet Count": {
+      "units": "x10^3/\u00b5L",
+      "adult_min": "150.0",
+      "adult_max": "450.0",
+      "child_min": "150.0",
+      "child_max": "450.0"
+    },
+    "Hemoglobin": {
+      "units": "g/dL",
+      "adult_min": "12.0",
+      "adult_max": "17.5",
+      "child_min": "11.0",
+      "child_max": "16.0"
+    },
+    "Hematocrit": {
+      "units": "%",
+      "adult_min": "36.0",
+      "adult_max": "53.0",
+      "child_min": "34.0",
+      "child_max": "49.0"
+    },
+    "RBC Count": {
+      "units": "x10^6/\u00b5L",
+      "adult_min": "4.1",
+      "adult_max": "5.9",
+      "child_min": "4.0",
+      "child_max": "5.3"
+    },
+    "HbA1c": {
+      "units": "%",
+      "adult_min": "4.0",
+      "adult_max": "5.6",
+      "child_min": "4.0",
+      "child_max": "5.6"
+    },
+    "Fasting Glucose": {
+      "units": "mg/dL",
+      "adult_min": "70.0",
+      "adult_max": "99.0",
+      "child_min": "70.0",
+      "child_max": "100.0"
+    },
+    "HDL": {
+      "units": "mg/dL",
+      "adult_min": "40.0",
+      "adult_max": "500.0",
+      "child_min": "45.0",
+      "child_max": "500.0"
+    },
+    "LDL": {
+      "units": "mg/dL",
+      "adult_min": "0.0",
+      "adult_max": "100.0",
+      "child_min": "0.0",
+      "child_max": "110.0"
+    },
+    "Total Cholesterol": {
+      "units": "mg/dL",
+      "adult_min": "0.0",
+      "adult_max": "200.0",
+      "child_min": "0.0",
+      "child_max": "170.0"
+    },
+    "Triglycerides": {
+      "units": "mg/dL",
+      "adult_min": "0.0",
+      "adult_max": "150.0",
+      "child_min": "0.0",
+      "child_max": "90.0"
+    },
+    "Sodium": {
+      "units": "mmol/L",
+      "adult_min": "135.0",
+      "adult_max": "145.0",
+      "child_min": "135.0",
+      "child_max": "144.0"
+    },
+    "Potassium": {
+      "units": "mmol/L",
+      "adult_min": "3.5",
+      "adult_max": "5.1",
+      "child_min": "3.4",
+      "child_max": "4.7"
+    },
+    "Chloride": {
+      "units": "mmol/L",
+      "adult_min": "98.0",
+      "adult_max": "107.0",
+      "child_min": "96.0",
+      "child_max": "106.0"
+    },
+    "Calcium": {
+      "units": "mg/dL",
+      "adult_min": "8.6",
+      "adult_max": "10.3",
+      "child_min": "9.0",
+      "child_max": "10.8"
+    },
+    "Magnesium": {
+      "units": "mg/dL",
+      "adult_min": "1.7",
+      "adult_max": "2.2",
+      "child_min": "1.7",
+      "child_max": "2.1"
+    },
+    "Phosphorus": {
+      "units": "mg/dL",
+      "adult_min": "2.5",
+      "adult_max": "4.5",
+      "child_min": "4.0",
+      "child_max": "7.0"
+    },
+    "Creatinine": {
+      "units": "mg/dL",
+      "adult_min": "0.6",
+      "adult_max": "1.3",
+      "child_min": "0.3",
+      "child_max": "0.7"
+    },
+    "BUN": {
+      "units": "mg/dL",
+      "adult_min": "7.0",
+      "adult_max": "20.0",
+      "child_min": "5.0",
+      "child_max": "18.0"
+    },
+    "Uric Acid": {
+      "units": "mg/dL",
+      "adult_min": "3.5",
+      "adult_max": "7.2",
+      "child_min": "2.0",
+      "child_max": "5.5"
+    },
+    "Albumin": {
+      "units": "g/dL",
+      "adult_min": "3.5",
+      "adult_max": "5.0",
+      "child_min": "3.8",
+      "child_max": "5.4"
+    },
+    "Globulin": {
+      "units": "g/dL",
+      "adult_min": "2.0",
+      "adult_max": "3.5",
+      "child_min": "2.2",
+      "child_max": "3.8"
+    },
+    "Total Protein": {
+      "units": "g/dL",
+      "adult_min": "6.0",
+      "adult_max": "8.3",
+      "child_min": "6.0",
+      "child_max": "8.0"
+    },
+    "ALT": {
+      "units": "U/L",
+      "adult_min": "7.0",
+      "adult_max": "56.0",
+      "child_min": "5.0",
+      "child_max": "25.0"
+    },
+    "AST": {
+      "units": "U/L",
+      "adult_min": "10.0",
+      "adult_max": "40.0",
+      "child_min": "10.0",
+      "child_max": "40.0"
+    },
+    "ALP": {
+      "units": "U/L",
+      "adult_min": "44.0",
+      "adult_max": "147.0",
+      "child_min": "150.0",
+      "child_max": "420.0"
+    },
+    "GGT": {
+      "units": "U/L",
+      "adult_min": "9.0",
+      "adult_max": "48.0",
+      "child_min": "10.0",
+      "child_max": "55.0"
+    },
+    "CK": {
+      "units": "U/L",
+      "adult_min": "26.0",
+      "adult_max": "174.0",
+      "child_min": "60.0",
+      "child_max": "300.0"
+    },
+    "Total Bilirubin": {
+      "units": "mg/dL",
+      "adult_min": "0.1",
+      "adult_max": "1.2",
+      "child_min": "0.1",
+      "child_max": "1.0"
+    },
+    "CRP": {
+      "units": "mg/L",
+      "adult_min": "0.0",
+      "adult_max": "3.0",
+      "child_min": "0.0",
+      "child_max": "3.0"
+    },
+    "Vitamin D": {
+      "units": "ng/mL",
+      "adult_min": "30.0",
+      "adult_max": "100.0",
+      "child_min": "30.0",
+      "child_max": "100.0"
+    },
+    "Osmolality": {
+      "units": "mOsm/kg",
+      "adult_min": "275.0",
+      "adult_max": "295.0",
+      "child_min": "275.0",
+      "child_max": "295.0"
+    },
+    "ACR": {
+      "units": "mg/g",
+      "adult_min": "0.0",
+      "adult_max": "30.0",
+      "child_min": "0.0",
+      "child_max": "30.0"
+    }
+  },
+  "nhanes_matches": [
+    {
+      "demographics": "Gender Male, Age 24, Race Mexican American, Birth Country USA, Marital Status Never Married, BMI Category Normal weight",
+      "biomarkers": {
+        "WBC_COUNT": "7.8",
+        "LYMPHOCYTE_PCT": "15.6",
+        "MONOCYTE_PCT": "5.3",
+        "NEUTROPHIL_PCT": "77.5",
+        "EOSINOPHIL_PCT": "1.4",
+        "BASOPHIL_PCT": "0.3",
+        "LYMPHOCYTE_NUM": "1.2",
+        "RBC_COUNT": "5.38",
+        "HEMOGLOBIN": "16.6",
+        "HEMATOCRIT": "47.3",
+        "PLATELET_COUNT": "244",
+        "HDL Cholesterol (mg/dL)": "49",
+        "TRIGLYCERIDES_MG_DL_X": "69",
+        "LDL Cholesterol (mg/dL)": "79",
+        "HBA1C_PERCENT": "4.6",
+        "Fasting Glucose (mg/dL)": "92",
+        "HS_CRP_MG_L": "1.65",
+        "HEPATITIS_A_RESULT": "1",
+        "HEPATITIS_B_SURFACE_ANTIBODY": "1",
+        "ALBUMIN_CREATININE_RATIO_MG_G": "4.75",
+        "ALT (Alanine Aminotransferase) (U/L)": "11",
+        "Albumin (g/dL)": "4.3",
+        "ALP (Alkaline Phosphatase) (U/L)": "75",
+        "AST (Aspartate Aminotransferase) (U/L)": "14",
+        "Bicarbonate (mmol/L)": "22",
+        "BUN (Blood Urea Nitrogen) (mg/dL)": "14",
+        "Chloride (mmol/L)": "105",
+        "CK (Creatine Kinase) (U/L)": "47",
+        "Creatinine (mg/dL)": "1.14",
+        "Globulin (g/dL)": "3.2",
+        "GGT (Gamma-Glutamyl Transferase) (U/L)": "13",
+        "Iron (\u00b5g/dL)": "76",
+        "LDH (Lactate Dehydrogenase) (U/L)": "145",
+        "Magnesium (mg/dL)": "2.3",
+        "Osmolality (mOsm/kg)": "283",
+        "Phosphorus (mg/dL)": "2.8",
+        "Potassium (mmol/L)": "3.9",
+        "Sodium (mmol/L)": "142",
+        "Total Bilirubin (mg/dL)": "0.6",
+        "Calcium (mg/dL)": "9.5",
+        "Total Cholesterol (mg/dL)": "140",
+        "Total Protein (g/dL)": "7.5",
+        "TRIGLYCERIDES_MG_DL_Y": "69",
+        "Uric Acid (mg/dL)": "5.5",
+        "Vitamin D 25-OH (nmol/L)": "75.3"
+      }
+    },
+    {
+      "demographics": "Gender Male, Age 25, Race Mexican American, Birth Country USA, Marital Status Never Married, BMI Category Normal weight",
+      "biomarkers": {
+        "WBC_COUNT": "11.9",
+        "LYMPHOCYTE_PCT": "34",
+        "MONOCYTE_PCT": "10.3",
+        "NEUTROPHIL_PCT": "47.9",
+        "EOSINOPHIL_PCT": "7.4",
+        "BASOPHIL_PCT": "0.5",
+        "LYMPHOCYTE_NUM": "4",
+        "RBC_COUNT": "4.12",
+        "HEMOGLOBIN": "14.2",
+        "HEMATOCRIT": "40.7",
+        "PLATELET_COUNT": "413",
+        "HDL Cholesterol (mg/dL)": "40",
+        "TRIGLYCERIDES_MG_DL_X": "187",
+        "LDL Cholesterol (mg/dL)": "97",
+        "HBA1C_PERCENT": "5.4",
+        "Fasting Glucose (mg/dL)": "96",
+        "HS_CRP_MG_L": "15.89",
+        "HEPATITIS_A_RESULT": "1",
+        "HEPATITIS_B_SURFACE_ANTIBODY": "2",
+        "ALBUMIN_CREATININE_RATIO_MG_G": "4.23",
+        "ALT (Alanine Aminotransferase) (U/L)": "69",
+        "Albumin (g/dL)": "3.9",
+        "ALP (Alkaline Phosphatase) (U/L)": "104",
+        "AST (Aspartate Aminotransferase) (U/L)": "32",
+        "Bicarbonate (mmol/L)": "27",
+        "BUN (Blood Urea Nitrogen) (mg/dL)": "8",
+        "Chloride (mmol/L)": "100",
+        "CK (Creatine Kinase) (U/L)": "53",
+        "Creatinine (mg/dL)": "0.76",
+        "Globulin (g/dL)": "3.6",
+        "GGT (Gamma-Glutamyl Transferase) (U/L)": "95",
+        "Iron (\u00b5g/dL)": "56",
+        "LDH (Lactate Dehydrogenase) (U/L)": "156",
+        "Magnesium (mg/dL)": "2",
+        "Osmolality (mOsm/kg)": "277",
+        "Phosphorus (mg/dL)": "3.6",
+        "Potassium (mmol/L)": "3.7",
+        "Sodium (mmol/L)": "140",
+        "Total Bilirubin (mg/dL)": "0.2",
+        "Calcium (mg/dL)": "9.4",
+        "Total Cholesterol (mg/dL)": "172",
+        "Total Protein (g/dL)": "7.5",
+        "TRIGLYCERIDES_MG_DL_Y": "188",
+        "Uric Acid (mg/dL)": "4.3",
+        "Vitamin D 25-OH (nmol/L)": "34.3"
+      }
+    }
+  ],
+  "nutrition": [
+    {
+      "food_name": "Doritos ",
+      "nutrients": {},
+      "ingredients": [
+        "Not Available"
+      ],
+      "labels": [
+        "Not Available"
+      ],
+      "raw_document": ""
+    },
+    {
+      "food_name": "Doritos Original Salted",
+      "nutrients": {
+        "energy_100g": 2110.0,
+        "fat_100g": 23.2,
+        "saturated-fat_100g": 11.2,
+        "carbohydrates_100g": 63.7,
+        "sugars_100g": 1.0,
+        "fiber_100g": 3.8,
+        "proteins_100g": 8.2,
+        "salt_100g": 1.1049,
+        "sodium_100g": 0.435,
+        "potassium_100g": 0.189
+      },
+      "ingredients": [
+        "Corn, vegetable oil, salt."
+      ],
+      "labels": [
+        "Not Available"
+      ],
+      "raw_document": ""
+    },
+    {
+      "food_name": "Doritos Cool Ranch flavoured corn chips",
+      "nutrients": {
+        "energy_100g": 2160.0,
+        "fat_100g": 26.4,
+        "saturated-fat_100g": 12.5,
+        "carbohydrates_100g": 60.5,
+        "sugars_100g": 2.2,
+        "fiber_100g": 3.5,
+        "proteins_100g": 7.5,
+        "salt_100g": 1.78562,
+        "sodium_100g": 0.703,
+        "potassium_100g": 0.164
+      },
+      "ingredients": [
+        "Corn, vegetable oil, maltodextrin, salt, tomato powder, corn starch, lactose (_milk_), whey powder (_milk_), skim _milk_ powder, corn syrup solids, onion powder, sugar, garlic powder, flavour enhance"
+      ],
+      "labels": [
+        "Not Available"
+      ],
+      "raw_document": ""
+    },
+    {
+      "food_name": "Doritos spicy sweet chili",
+      "nutrients": {},
+      "ingredients": [
+        "Not Available"
+      ],
+      "labels": [
+        "es:No-vegan"
+      ],
+      "raw_document": ""
+    },
+    {
+      "food_name": "Doritos Flavored Tortilla Chips - Nacho Cheese",
+      "nutrients": {
+        "energy_100g": 293.0,
+        "saturated-fat_100g": 0.5,
+        "sugars_100g": 0.0,
+        "fiber_100g": 0.5,
+        "proteins_100g": 1.0,
+        "salt_100g": 0.54,
+        "sodium_100g": 0.21259842519685
+      },
+      "ingredients": [
+        "Not Available"
+      ],
+      "labels": [
+        "Not Available"
+      ],
+      "raw_document": ""
+    }
+  ],
+  "question": "Hey Nutrify, I am hungry and I feel like eating Doritos."
+}
+```
