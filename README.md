@@ -18,7 +18,8 @@ While pipeline components are manually triggered due to student budget constrain
 ![FigmaPrototype](FigmaPrototype.gif)
 
 
-<video src="NutrifyMe%20ScreenRecord.mp4" controls width="800"></video>
+https://github.com/user-attachments/assets/875af88b-f26b-4632-984a-5e96457760c7
+
 
 
 <p align="center">••••••••••••</p>
