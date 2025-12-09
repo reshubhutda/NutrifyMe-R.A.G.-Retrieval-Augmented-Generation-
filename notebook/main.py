@@ -53,7 +53,7 @@ def start_agent_once(user_id, user_question):
     nhanes_matches = get_similar_nhanes_users(user_id, top_k=5)
 
     # same gemini model
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
 
     
     # 2. while-loop (ONE ITERATION)

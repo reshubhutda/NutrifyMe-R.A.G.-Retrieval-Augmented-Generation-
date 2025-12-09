@@ -3,7 +3,7 @@ import os
 import json
 
 # Set your Gemini API key
-genai.configure(api_key="")
+genai.configure(api_key="AIzaSyDr_hAIc7KSa1oWjhKVmjrIKPP7y3_frw0")
 
 def ask_gemini(user_question, final_context):
     """
@@ -94,6 +94,6 @@ TASK:
 Now answer the user's question.
 """
 
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
     response = model.generate_content(prompt)
     return response.text
