@@ -348,7 +348,7 @@ project-root/
 │   ├── store_embed_csv.py
 │   ├── user_db.py
 │   ├── user_query.py
-│   ├──DataBricks_Spark_Data_Processing.ipynb
+│   ├── DataBricks_Spark_Data_Processing.ipynb
 │   └── Food_Facts_Python_Data_Processing.ipynb
 │
 │── sql/
