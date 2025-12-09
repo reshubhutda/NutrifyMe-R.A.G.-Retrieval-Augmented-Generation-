@@ -3,7 +3,7 @@ import os
 import json
 
 # Set your Gemini API key
-genai.configure(api_key="AIzaSyDr_hAIc7KSa1oWjhKVmjrIKPP7y3_frw0")
+genai.configure(api_key="")
 
 def ask_gemini(user_question, final_context):
     """
