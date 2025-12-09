@@ -347,7 +347,9 @@ project-root/
 │   ├── Snowflake_Connector.py
 │   ├── store_embed_csv.py
 │   ├── user_db.py
-│   └── user_query.py
+│   ├── user_query.py
+│   ├──DataBricks_Spark_Data_Processing.ipynb
+│   └── Food_Facts_Python_Data_Processing.ipynb
 │
 │── sql/
 │   └── RawData.sql
@@ -357,6 +359,7 @@ project-root/
 ├── README.md
 ├── requirements.txt
 └── uv.lock
+
 
 ```
 
