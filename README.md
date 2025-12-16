@@ -185,7 +185,7 @@ The system operates in two modes: </p>
   Pull Snowflake tables, Build chunking logic, Generate embeddings, Insert vectors into ChromaDB, Test prompt logic, Run RAG end-to-end</p>
   <p>Step 7 — ChromaDB as Local Vector Store: All food vectors, Health-condition vectors, Reference-range vectors, Merged context vectors</p>
   
-![ETL Pipeline](ETL%20Pipeline.jpg)
+![ETLPipelineUpdated](ETLPipelineUpdated.jpg)
   
   <p><b>Final Response Generation</b></p>
   <ul>
