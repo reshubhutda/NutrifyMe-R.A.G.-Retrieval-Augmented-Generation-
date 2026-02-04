@@ -2,7 +2,7 @@
 
 [![Read This Article on Medium](https://img.shields.io/badge/Read%20This%20Article%20on%20Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@reshubhutda/nutrifyme-fa577d34803a)
 
-<h3>A full-stack RAG pipeline integrating MySQL, ChromaDB, Snowflake, Airflow, S3, Databricks, and Gemini LLM for health-aware nutrition insights</h3>
+<h3>A full-stack RAG pipeline integrating MySQL, ChromaDB, Snowflake, Airflow, S3, Databricks, and Gemini LLM for health-aware nutrition insights.</h3>
 <br>
 <div>
 
